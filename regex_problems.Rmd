@@ -1,0 +1,64 @@
+---
+title: "regex_problems"
+author: "Colleen Minnihan"
+date: "4/10/2021"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r}
+# read in the data
+bestsellers <- read.csv("bestsellers.csv") # the filepath to the downloaded data
+
+bestsellers %>%
+  head(10)
+```
+
+1. Find books with multiple authors (HINT: Consider the possibility of an author having “and” in their name)
+```{r}
+#how do i get it to print the book titles?
+str_extract(bestsellers %>% pull(author), " and ")
+```
+
+2. Detect if the author’s first name starts with a vowel
+```{r}
+str_detect(bestsellers %>% pull(author), "^[AEIOUY]")
+```
+
+3. Change all authors with the name Alexander to Alex
+```{r}
+str_replace_all(bestsellers %>% pull(author), "Alexander", "Alex")
+```
+
+4. Find books that are the second book in a series
+```{r}
+bestsellers %>%
+  mutate(series = str_detect(bestsellers %>% pull(description), pattern = "sequel")) %>%
+  filter(series == TRUE)
+```
+
+5. Find books that are the third or fourth one in a series
+```{r}
+bestsellers %>%
+  mutate(series = str_detect(bestsellers %>% pull(description), pattern = "third|fourth")) %>%
+  filter(series == TRUE)
+
+head(bestsellers)
+```
+6.
+```{r}
+bestsellers %>%
+  mutate(series = str_detect(bestsellers %>% pull(description), pattern = "[10-19]th")) %>%
+  filter(series == TRUE)
+```
+
+7. Describe in your own words how you would go about writing a regular expression for password pattern matching (ie 8 character minimum, one capital letter minimum, one lowercase letter minimum, one digit minimum, one special character minimum). This is an open ended question.
+
+**How do I do this in paragraph form and not attempt to write the regular expression?**
+
+
