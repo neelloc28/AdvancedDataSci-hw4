@@ -61,4 +61,34 @@ bestsellers %>%
 
 **How do I do this in paragraph form and not attempt to write the regular expression?**
 
+```{r, eval = FALSE}
+#8 character minimum
+[a-zA-Z0-9]{8,} #from lowercase or uppercase letters or digits, matches at least 8 times
+
+#one capital letter minimum
+[A-Z]{1,} #from uppercase characters A-Z, matches at least one time
+
+#one lowercase letter minimum
+[a-z]{1,} #from lowercase characters A-Z, matches at least one time
+
+#one digit minimum
+[0-9]{1,} #from digits 0-9, matches at least one time
+
+#one special character minimum
+"\W"{1,} #from all symbols, matches at least one time
+```
+
+```{r}
+#putting it all together
+str_detect(string = "passwordP2?", pattern = "[a-zA-Z0-9]{8,} &
+           [A-Z]{1,} &
+           [a-z]{1,} &
+           [0-9]{1,} &
+           \\W{1,}")
+
+#why is it saying false though?
+```
+
+
+
 
