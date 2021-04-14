@@ -106,7 +106,16 @@ bestsellers %>%
 "\W"{1,} #from all symbols, matches at least one time
 ```
 
+```{r}
+#putting it all together
+str_detect(string = "passwordP2?", pattern = "[a-zA-Z0-9]{8,} &
+           [A-Z]{1,} &
+           [a-z]{1,} &
+           [0-9]{1,} &
+           \\W{1,}")
 
+#why is it saying false though?
+```
 
 
 ## `tmap` exercises
@@ -227,6 +236,6 @@ I'm hoping that the topic for this week is a review for all of you, but it's goo
 
 **Task:**
 
-Read both short articles in Week6. Data visualization section of [Calling Bulllshit](https://www.callingbullshit.org/syllabus.html#Visual). Were there any principles mentioned that you hadn't heard of before? What graph stood out for you as "the worst"? Did any of the graphs fool you? Or were able to overcome the bad practices (don't worry if they fool you - plently of them have fooled me, too.)? How does practicing good data visualization principles fit in with data ethics?
+Read both short articles in Week6. Data visualization section of [Calling Bulllshit](https://www.callingbullshit.org/syllabus.html#Visual). Were there any principles mentioned that you hadn't heard of before? What graph stood out for you as "the worst"? Did any of the graphs fool you? Or were able to overcome the bad practices (don't worry if they fool you - plenty of them have fooled me, too.)? How does practicing good data visualization principles fit in with data ethics?
 
 
