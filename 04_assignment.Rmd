@@ -241,6 +241,9 @@ I'm hoping that the topic for this week is a review for all of you, but it's goo
 
 Read both short articles in Week6. Data visualization section of [Calling Bulllshit](https://www.callingbullshit.org/syllabus.html#Visual). Were there any principles mentioned that you hadn't heard of before? What graph stood out for you as "the worst"? Did any of the graphs fool you? Or were able to overcome the bad practices (don't worry if they fool you - plenty of them have fooled me, too.)? How does practicing good data visualization principles fit in with data ethics?
 
-things i learned:
--bar graphs should always start at 0 (because they show the "absolute magnitudes" of the values) but line graphs don't need to
+**I probably should have known this before, but I learned that bar graphs should always start at 0 (because they show the "absolute magnitudes" of the values), whereas line graphs don't need to.  Although there were lots of cringe-worthy plots, the worst to me was the one with multiple axes (with different scales) on the same graph, because attempting to interpret it made my brain hurt.   I was fooled by the graphs that violated the principle of proportional ink, which I had never heard of before. That being said, it definitely makes sense how failing to follow that principle can make gaps between different values seem way bigger or smaller than reality!**
+
+**Practicing good data visualization principles fits in with data ethics because a misleading graph can lead to false conclusions by viewers (and can be used to push a certain agenda with any kind of data).  For instance, the inverted y axis (with 0 at the top and 800 at the bottom) makes it appear as though gun deaths decreased with the enactment of the Stand Your Ground law, when in reality, they skyrocketed.**
+
+
 
